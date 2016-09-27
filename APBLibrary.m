@@ -10,7 +10,7 @@
 
 @implementation APBLibrary
 
--(instancetype)initWithName:(NSString *)name summary:(NSString *)summary language:(NSString *)language homepageURL:(NSURL *)homepageURL numberOfStars:(NSInteger)numberOfStars
+-(instancetype)initWithName:(NSString *)name summary:(NSString *)summary language:(NSString *)language homepageURL:(NSString *)homepageURL numberOfStars:(NSInteger)numberOfStars
 {
     self = [super init];
     if (self){

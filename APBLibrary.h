@@ -10,12 +10,12 @@
 
 @interface APBLibrary : NSObject
 
--(instancetype)initWithName:(NSString *)name summary:(NSString *)summary language:(NSString *)language homepageURL:(NSURL *)homepageURL numberOfStars:(NSInteger)numberOfStars;
+-(instancetype)initWithName:(NSString *)name summary:(NSString *)summary language:(NSString *)language homepageURL:(NSString *)homepageURL numberOfStars:(NSInteger)numberOfStars;
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *summary;
 @property (nonatomic, copy) NSString *language;
-@property (nonatomic, copy) NSURL *homepageURL;
+@property (nonatomic, copy) NSString *homepageURL;
 @property (nonatomic) NSInteger numberOfStars;
 
 @end
