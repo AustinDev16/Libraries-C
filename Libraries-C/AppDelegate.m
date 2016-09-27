@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "APBLibrariesNetworkController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    [[APBLibrariesNetworkController sharedController] fetchResultsForSearchTerm:@"" completion:^(NSData *data, NSError *error) {
+      
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"%@", data);
+            printf("Hey");
+        });
+        
+        
+    }];
+    
+    //    [someObject someMethodThatTakesABlock:^returnType (parameters) {...}];
+    
+    
+    
     return YES;
 }
 

@@ -13,6 +13,7 @@
 		FA88A6661D9B189D00D51A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA88A6651D9B189D00D51A96 /* Assets.xcassets */; };
 		FA88A6691D9B189D00D51A96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA88A6671D9B189D00D51A96 /* LaunchScreen.storyboard */; };
 		FA88A6721D9B1A5700D51A96 /* APBLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = FA88A6711D9B1A5700D51A96 /* APBLibrary.m */; };
+		FA88A6761D9B1D8C00D51A96 /* APBLibrariesNetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA88A6751D9B1D8C00D51A96 /* APBLibrariesNetworkController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		FA88A66A1D9B189D00D51A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA88A6701D9B1A5700D51A96 /* APBLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBLibrary.h; sourceTree = "<group>"; };
 		FA88A6711D9B1A5700D51A96 /* APBLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBLibrary.m; sourceTree = "<group>"; };
+		FA88A6741D9B1D8C00D51A96 /* APBLibrariesNetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBLibrariesNetworkController.h; sourceTree = "<group>"; };
+		FA88A6751D9B1D8C00D51A96 /* APBLibrariesNetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBLibrariesNetworkController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		FA88A6581D9B189D00D51A96 /* Libraries-C */ = {
 			isa = PBXGroup;
 			children = (
+				FA88A6771D9B1D9700D51A96 /* NetworkController */,
 				FA88A6731D9B1A6500D51A96 /* Model */,
 				FA88A65C1D9B189D00D51A96 /* AppDelegate.h */,
 				FA88A65D1D9B189D00D51A96 /* AppDelegate.m */,
@@ -85,6 +89,16 @@
 				FA88A6711D9B1A5700D51A96 /* APBLibrary.m */,
 			);
 			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FA88A6771D9B1D9700D51A96 /* NetworkController */ = {
+			isa = PBXGroup;
+			children = (
+				FA88A6741D9B1D8C00D51A96 /* APBLibrariesNetworkController.h */,
+				FA88A6751D9B1D8C00D51A96 /* APBLibrariesNetworkController.m */,
+			);
+			name = NetworkController;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -159,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA88A6761D9B1D8C00D51A96 /* APBLibrariesNetworkController.m in Sources */,
 				FA88A6721D9B1A5700D51A96 /* APBLibrary.m in Sources */,
 				FA88A65E1D9B189D00D51A96 /* AppDelegate.m in Sources */,
 				FA88A65B1D9B189D00D51A96 /* main.m in Sources */,
