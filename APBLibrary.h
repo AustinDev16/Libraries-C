@@ -12,6 +12,8 @@
 
 -(instancetype)initWithName:(NSString *)name summary:(NSString *)summary language:(NSString *)language homepageURL:(NSString *)homepageURL numberOfStars:(NSInteger)numberOfStars;
 
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *summary;
 @property (nonatomic, copy) NSString *language;

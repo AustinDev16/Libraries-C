@@ -23,4 +23,25 @@
     return self;
 }
 
+
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    NSString *name = [dictionary valueForKey:@"name"];
+    NSString *summary = [dictionary valueForKey:@"description"];
+    NSString *language = [dictionary valueForKey:@"language"];
+    NSString *homepageURL = [dictionary valueForKey:@"homepage"];
+    NSString *starsString = [dictionary valueForKey:@"stars"]; // can I cast this directly?
+    
+    NSInteger numberOfStars = [starsString integerValue];
+    BOOL complete = (name && summary && language && homepageURL && numberOfStars);
+    self = [super init];
+    if (self && complete){
+        _name = name;
+        _summary = summary;
+        _language = language;
+        _homepageURL = homepageURL;
+        _numberOfStars = numberOfStars;
+    }
+    return self;
+}
 @end
