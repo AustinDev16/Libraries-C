@@ -8,6 +8,11 @@
 
 #import "APBLibrariesNetworkController.h"
 
+@interface APBLibrariesNetworkController()
+
+
+@end
+
 static NSString *apiKey = @"913fe7b39409b4a97f116b4b3d40cd5b";
 //https://libraries.io/api/:platform/:name?api_key=YOUR_API_KEY
 // https://libraries.io/api/npm/grunt?api_key=YOUR_API_KEY
@@ -24,17 +29,41 @@ static NSString *apiKey = @"913fe7b39409b4a97f116b4b3d40cd5b";
     return sharedController;
 }
 
+-(NSURL *)urlFromURLParametersWithBaseURL:(NSURL *)baseURL search:(NSString *)search {
+    
+    
+    NSURL *base = [baseURL URLByAppendingPathComponent:search];
+    
+    NSURLComponents *components = [NSURLComponents componentsWithURL:base resolvingAgainstBaseURL:YES];
+    NSURLQueryItem *query = [NSURLQueryItem queryItemWithName:@"913fe7b39409b4a97f116b4b3d40cd5b" value:nil];
+    components.queryItems = [NSArray arrayWithObjects:query, nil];
+    
+    return components.URL;
+    
+}
 
 -(void)fetchResultsForSearchTerm:(NSString *)searchTerm completion:(void (^)(NSData *, NSError *))completion
 {
     // perform network call
     
-    NSString *url = @"https://libraries.io/api/npm/grunt?913fe7b39409b4a97f116b4b3d40cd5b";
+    // prepare search term
     
-    NSURL *baseURL = [[NSURL alloc] initWithString: url];
+    NSString *search = [searchTerm lowercaseString];
+    NSString *urlString = @"https://libraries.io/api/npm";
+    NSURL *baseURL = [NSURL URLWithString:urlString];
+    NSURL *requestURL = [self urlFromURLParametersWithBaseURL:baseURL search:search];
+    // prepare URL
+  
+    NSLog(@"%@", requestURL.absoluteString);
+    
+//    
+  
     
     
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:baseURL];
+    
+    
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:requestURL];
     request.HTTPMethod = @"GET";
     
     NSURLSession *session = [NSURLSession sharedSession];
@@ -45,6 +74,9 @@ static NSString *apiKey = @"913fe7b39409b4a97f116b4b3d40cd5b";
     [dataTask resume];
 
 //    [someObject someMethodThatTakesABlock:^returnType (parameters) {...}];
+
+    
+
 }
 
 

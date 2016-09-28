@@ -16,4 +16,5 @@
 
 -(void)fetchResultsForSearchTerm:(NSString *)searchTerm completion:(void (^)(NSData *data, NSError *error))completion;
 
+-(NSURL *) urlFromURLParametersWithBaseURL:(NSURL *)baseURL search:(NSString *)search;
 @end

@@ -30,9 +30,11 @@
     NSString *summary = [dictionary valueForKey:@"description"];
     NSString *language = [dictionary valueForKey:@"language"];
     NSString *homepageURL = [dictionary valueForKey:@"homepage"];
-    NSString *starsString = [dictionary valueForKey:@"stars"]; // can I cast this directly?
+// correct this type
+    NSNumber *starsNumber = [dictionary valueForKey:@"stars"]; // can I cast this directly?
     
-    NSInteger numberOfStars = [starsString integerValue];
+    NSInteger numberOfStars = [starsNumber integerValue];
+    
     BOOL complete = (name && summary && language && homepageURL && numberOfStars);
     self = [super init];
     if (self && complete){

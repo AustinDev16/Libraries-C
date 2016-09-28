@@ -18,26 +18,32 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    [[APBLibrariesNetworkController sharedController] fetchResultsForSearchTerm:@"" completion:^(NSData *data, NSError *error) {
-      
+    
+    [[APBLibrariesNetworkController sharedController] fetchResultsForSearchTerm:@"Grunt" completion:^(NSData *data, NSError *error) {
+        
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (data){
-                NSError *error = nil;
-                id jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error]; // why the ampersand?
-                
-                if ([jsonDictionary isKindOfClass:[NSDictionary class]]){ // what is this?
-                    NSDictionary *parsedResults = jsonDictionary;
-                    NSString *name = [parsedResults valueForKey:@"name"];
-                    
-                    APBLibrary *searchResult = [[APBLibrary alloc] initWithDictionary:parsedResults];
-                    NSLog(@"%@ %@ %@ %@", searchResult.name, searchResult.summary, searchResult.language, @(searchResult.numberOfStars));
-                    
-                }
-                
+            
+            if (!data) { return; }
+            
+            NSError *error = nil; // do
+            id jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error]; // why the ampersand? address to error
+            
+            if (jsonDictionary == nil){
+                // catch block
             }
-           // NSLog(@"%@", data);
-           // printf("Hey");
+            
+            
+            if (![jsonDictionary isKindOfClass:[NSDictionary class]]) { return; }
+            //NSDictionary *parsedResults = jsonDictionary;
+            // NSString *name = [parsedResults valueForKey:@"name"];
+            
+            APBLibrary *searchResult = [[APBLibrary alloc] initWithDictionary:jsonDictionary];
+            NSLog(@"%@ %@ %@ %@", searchResult.name, searchResult.summary, searchResult.language, @(searchResult.numberOfStars));
+            
+            
+            
+            //NSLog(@"%@", data);
+            // printf("Hey");
         });
         
         
