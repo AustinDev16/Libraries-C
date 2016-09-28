@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA2CDA7A1D9C75DF00434D6F /* APBSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2CDA791D9C75DF00434D6F /* APBSearchController.m */; };
+		FA2CDA7D1D9C815200434D6F /* APBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2CDA7C1D9C815200434D6F /* APBMainViewController.m */; };
 		FA88A65B1D9B189D00D51A96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA88A65A1D9B189D00D51A96 /* main.m */; };
 		FA88A65E1D9B189D00D51A96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA88A65D1D9B189D00D51A96 /* AppDelegate.m */; };
 		FA88A6641D9B189D00D51A96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA88A6621D9B189D00D51A96 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 /* Begin PBXFileReference section */
 		FA2CDA781D9C75DF00434D6F /* APBSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBSearchController.h; sourceTree = "<group>"; };
 		FA2CDA791D9C75DF00434D6F /* APBSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBSearchController.m; sourceTree = "<group>"; };
+		FA2CDA7B1D9C815200434D6F /* APBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBMainViewController.h; sourceTree = "<group>"; };
+		FA2CDA7C1D9C815200434D6F /* APBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBMainViewController.m; sourceTree = "<group>"; };
 		FA88A6561D9B189D00D51A96 /* Libraries-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Libraries-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA88A65A1D9B189D00D51A96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA88A65C1D9B189D00D51A96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 				FA88A65C1D9B189D00D51A96 /* AppDelegate.h */,
 				FA88A65D1D9B189D00D51A96 /* AppDelegate.m */,
 				FA88A6621D9B189D00D51A96 /* Main.storyboard */,
+				FA2CDA7B1D9C815200434D6F /* APBMainViewController.h */,
+				FA2CDA7C1D9C815200434D6F /* APBMainViewController.m */,
 				FA88A6651D9B189D00D51A96 /* Assets.xcassets */,
 				FA88A6671D9B189D00D51A96 /* LaunchScreen.storyboard */,
 				FA88A66A1D9B189D00D51A96 /* Info.plist */,
@@ -183,6 +188,7 @@
 				FA88A6721D9B1A5700D51A96 /* APBLibrary.m in Sources */,
 				FA88A65E1D9B189D00D51A96 /* AppDelegate.m in Sources */,
 				FA88A65B1D9B189D00D51A96 /* main.m in Sources */,
+				FA2CDA7D1D9C815200434D6F /* APBMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
